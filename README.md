@@ -41,4 +41,4 @@ To help you, this project has a `npm run fix` command to fix all eslint errors.
 
 ## License
 
-MIT License © Felipe Fialho
+MIT License © Marcosasp
