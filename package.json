@@ -9,12 +9,12 @@
     "last 2 versions"
   ],
   "author": {
-    "name": "Felipe Fialho",
-    "email": "hi@felipefialho.com",
-    "url": "http://www.felipefialho.com"
+    "name": "Marcos Antônio",
+    "email": "marcos.cruzeiro17@hotmail.com",
+    "url": "http://www.marcosantonio.com"
   },
   "scripts": {
-    "start": "NODE_ENV=development webpack serve",
+    "start": "cross-env NODE_ENV=development webpack serve",
     "build": "NODE_ENV=production webpack",
     "analyzer": "npm run build && webpack-bundle-analyzer ./dist/stats.json",
     "lint": "npm run lint:js && npm run lint:css",
@@ -34,6 +34,7 @@
     "babel-loader": "^9.1.2",
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^11.0.0",
+    "cross-env": "^10.1.0",
     "css-loader": "^6.8.1",
     "cssnano": "^5.1.15",
     "eslint": "^8.50.0",

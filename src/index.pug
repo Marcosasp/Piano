@@ -19,8 +19,8 @@ html(lang='en')
     meta(name='twitter:card' content='summary')
     meta(name='twitter:title' content=data.title)
     meta(name='twitter:description' content=data.description)
-    meta(name='twitter:site' content='@felipefialho_')
-    meta(name='twitter:creator' content='@felipefialho_')
+    meta(name='twitter:site' content='@marcosantonio_')
+    meta(name='twitter:creator' content='@marcosantonio_')
     meta(name='twitter:image:src' content=data.url + data.logo) 
     meta(name='og:title' content=data.title)
     meta(name='og:description' content=data.description)
@@ -32,64 +32,120 @@ html(lang='en')
     meta(http-equiv='X-UA-Compatible' content='IE=edge') 
     meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=5') 
     meta(name='theme-color' content=data.theme_color)
-    link(rel='shortcut icon' type='image/favicon' href='favicon.ico')   
+    link(rel='shortcut icon' type='image/favicon' href='favicon.ico')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap')
     style.
       body {
         visibility: hidden;
-      } 
-  body    
-    noscript 
+      }
+  body
+    noscript
       iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-TZDLZX82' height='0' width='0' style='display:none;visibility:hidden')
     section.header
       .piano
         .piano-key
           .piano-key__white(data-key='20' data-note='1C')
+            span.key-note C
+            span.key-shortcut ⇪
           .piano-key__black(data-key='81' data-note='1Cs')
+            span.key-note C#
         .piano-key
           .piano-key__white(data-key='65' data-note='1D')
+            span.key-note D
+            span.key-shortcut A
           .piano-key__black(data-key='87' data-note='1Ds')
+            span.key-note D#
         .piano-key
           .piano-key__white(data-key='83' data-note='1E')
+            span.key-note E
+            span.key-shortcut S
         .piano-key
           .piano-key__white(data-key='68' data-note='1F')
+            span.key-note F
+            span.key-shortcut D
           .piano-key__black(data-key='82' data-note='1Fs')
+            span.key-note F#
         .piano-key
           .piano-key__white(data-key='70' data-note='1G')
+            span.key-note G
+            span.key-shortcut F
           .piano-key__black(data-key='84' data-note='1Gs')
+            span.key-note G#
         .piano-key
           .piano-key__white(data-key='71' data-note='2A')
+            span.key-note A
+            span.key-shortcut G
           .piano-key__black(data-key='89' data-note='2As')
+            span.key-note A#
         .piano-key
           .piano-key__white(data-key='72' data-note='2B')
+            span.key-note B
+            span.key-shortcut H
         .piano-key
           .piano-key__white(data-key='74' data-note='2C')
+            span.key-note C
+            span.key-shortcut J
           .piano-key__black(data-key='73' data-note='2Cs')
+            span.key-note C#
         .piano-key
           .piano-key__white(data-key='75' data-note='2D')
+            span.key-note D
+            span.key-shortcut K
           .piano-key__black(data-key='79' data-note='2Ds')
+            span.key-note D#
         .piano-key
           .piano-key__white(data-key='76' data-note='2E')
+            span.key-note E
+            span.key-shortcut L
         .piano-key
           .piano-key__white(data-key='186' data-note='2F')
+            span.key-note F
+            span.key-shortcut ;
           .piano-key__black(data-key='219' data-note='2Fs')
+            span.key-note F#
         .piano-key
           .piano-key__white(data-key='222' data-note='2G')
+            span.key-note G
+            span.key-shortcut '
           .piano-key__black(data-key='221' data-note='2Gs')
+            span.key-note G#
         .piano-key
           .piano-key__white(data-key='220' data-note='3A')
+            span.key-note A
+            span.key-shortcut \
           .piano-key__black(data-key='13' data-note='3As')
+            span.key-note A#
         .piano-key
-          .piano-key__white(data-key='37' data-note='3B') 
-    main.main 
+          .piano-key__white(data-key='37' data-note='3B')
+            span.key-note B
+            span.key-shortcut ←
+    main.main
       .container
         .content
           h1.title #{data.title}
-          h2.subtitle #{data.description} 😎
-          a.github(href='https://github.com/felipefialho/piano') 
-            img(src='https://img.shields.io/github/stars/felipefialho/piano.svg?style=for-the-badge&label=Github' alt='Stars') 
-          p.description The better way to play the piano is using a touch device. You can also use your keyboard or mouse to play.  
-          p.description Using the keyboard, the first key is "caps lock" and the sequence of keys is the same of the piano.
-    footer.footer(role='dialog') 
-      p.footer__description 
-        | Made with ❤ by 
-        a.footer__link(href='https://twitter.com/felipefialho_' target='_blank' rel='noopener noreferrer') Felipe Fialho
+          h2.subtitle #{data.description}
+          .content__links
+            a.github(href='https://github.com/marcosantonio/piano')
+              img(src='https://img.shields.io/github/stars/marcosantonio/piano.svg?style=for-the-badge&label=Github' alt='Stars')
+          .content__info
+            .info-card
+              .info-card__icon 🎹
+              .info-card__text
+                strong Touch
+                p Tap the keys on any touch device to play notes
+            .info-card
+              .info-card__icon ⌨️
+              .info-card__text
+                strong Keyboard
+                p Start from Caps Lock — keys follow the piano layout
+            .info-card
+              .info-card__icon 🖱️
+              .info-card__text
+                strong Mouse
+                p Click any white or black key to sound a note
+    footer.footer(role='contentinfo')
+      p.footer__description
+        | Made with ❤ by
+        a.footer__link(href='https://twitter.com/marcosantonio_' target='_blank' rel='noopener noreferrer')  Marcos Antônio
